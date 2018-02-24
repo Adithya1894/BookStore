@@ -4,6 +4,8 @@ import com.adithya.bookstore.model.Book;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+import java.util.List;
 
 public class BookRepository {
 
@@ -28,5 +30,18 @@ public class BookRepository {
         entityManager.remove(entityManager.getReference(Book.class, id));
 
     }
+
+    public List<Book> findAll(){
+        TypedQuery<Book> query = entityManager.createQuery("SELECT b from Book order by b.title desc ", Book.class);
+                return query.getResultList();
+    }
+
+    public Long countAll(){
+        TypedQuery<Long> query = entityManager.createQuery("SELECT count(b) from Book b", Long.class);
+        return query.getSingleResult();
+
+    }
+
+
 
 }
