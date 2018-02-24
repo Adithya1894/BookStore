@@ -2,11 +2,14 @@ package com.adithya.bookstore.repository;
 
 import com.adithya.bookstore.model.Book;
 
+import javax.enterprise.inject.TransientReference;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 import java.util.List;
 
+@Transactional(Transactional.TxType.SUPPORTS)
 public class BookRepository {
 
     @PersistenceContext(name = "bookStorePu")
@@ -18,6 +21,7 @@ public class BookRepository {
 
     }
 
+    @Transactional(Transactional.TxType.REQUIRED)
     public Book create(Book book)
     {
          entityManager.persist(book);
@@ -25,6 +29,7 @@ public class BookRepository {
 
     }
 
+    @Transactional(Transactional.TxType.REQUIRED)
     public void delete(Long id){
 
         entityManager.remove(entityManager.getReference(Book.class, id));
