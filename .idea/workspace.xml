@@ -676,7 +676,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519460207017</updated>
-      <workItem from="1519460211560" duration="7577000" />
+      <workItem from="1519460211560" duration="7604000" />
     </task>
     <task id="LOCAL-00001" summary="added the language enum Class">
       <created>1519461168157</created>
@@ -741,7 +741,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519516550511</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added the Books Constructor">
+      <created>1519521356119</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1519521356119</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -768,7 +775,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7577000" />
+    <option name="totallyTimeSpent" value="7604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="718" height="900" extended-state="0" />
