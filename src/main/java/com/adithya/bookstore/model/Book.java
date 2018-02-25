@@ -31,6 +31,17 @@ public class Book {
 
     private Language language;
 
+    public Book(String title, String description, float unitcost, String isbn, Date publishedDate, Integer noOfPages, String image, Language language) {
+        this.title = title;
+        this.description = description;
+        this.unitcost = unitcost;
+        this.isbn = isbn;
+        this.publishedDate = publishedDate;
+        this.noOfPages = noOfPages;
+        this.image = image;
+        this.language = language;
+    }
+
     public Long getId() {
         return id;
     }
