@@ -23,7 +23,7 @@ public class Book {
     private String title;
 
     @Column(length = 1000)
-    @Size(min=1, max = 10000)
+    @Size(min=1, max = 100000)
     private String description;
 
     @Column(name = "unit_cost")
@@ -34,26 +34,26 @@ public class Book {
     @Size(min =1, max = 50)
     private String isbn;
 
-    @Column(name = "published_date")
+    @Column(name = "publication_date")
     @Temporal(TemporalType.DATE)
     @Past
     private Date publishedDate;
 
-    @Column(name = "no_of_pages")
+    @Column(name = "nb_of_pages")
     private Integer noOfPages;
 
-    private String image;
+    private String image_url;
 
     private Language language;
 
-    public Book(String title, String description, float unitcost, String isbn, Date publishedDate, Integer noOfPages, String image, Language language) {
+    public Book(String id, String isbn, String title, String image_url,Language language,float unit_cost,Integer noOfPages, Date publishedDate, String description) {
         this.title = title;
         this.description = description;
         this.unitcost = unitcost;
         this.isbn = isbn;
         this.publishedDate = publishedDate;
         this.noOfPages = noOfPages;
-        this.image = image;
+        this.image_url = image_url;
         this.language = language;
     }
 
@@ -114,11 +114,11 @@ public class Book {
     }
 
     public String getImage() {
-        return image;
+        return image_url;
     }
 
     public void setImage(String image) {
-        this.image = image;
+        this.image_url = image;
     }
 
     public Language getLanguage() {
@@ -139,7 +139,7 @@ public class Book {
                 ", isbn='" + isbn + '\'' +
                 ", publishedDate=" + publishedDate +
                 ", noOfPages=" + noOfPages +
-                ", image='" + image + '\'' +
+                ", image='" + image_url + '\'' +
                 ", language=" + language +
                 '}';
     }
