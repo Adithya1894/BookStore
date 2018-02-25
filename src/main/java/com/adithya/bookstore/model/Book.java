@@ -5,6 +5,9 @@ import java.util.Date;
 
 @Entity
 public class Book {
+    //default constructor
+    public Book() {
+    }
 
     @Id @GeneratedValue
     private Long id;
