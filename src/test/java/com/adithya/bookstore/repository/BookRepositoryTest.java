@@ -22,6 +22,16 @@ public class BookRepositoryTest {
     @Inject
     private BookRepository bookRepository;
 
+    @Test(expected = Exception.class)
+    public void findWithInvalid(){
+        bookRepository.find(null);
+    }
+
+    @Test(expected = Exception.class)
+    public void createInvalidBook(){
+        Book book = new Book(null, "This has all the java code", 11,"98765",new Date(), 348, "image.url", Language.English );
+        bookRepository.create(book);
+    }
 
     @Test
     public void create() throws Exception{
