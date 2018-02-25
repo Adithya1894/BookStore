@@ -12,6 +12,8 @@ import org.junit.runner.RunWith;
 
 import javax.inject.Inject;
 
+import java.util.Date;
+
 import static org.junit.Assert.*;
 
 @RunWith(Arquillian.class)
@@ -29,7 +31,28 @@ public class BookRepositoryTest {
 
         //create a book
 
-        Book book = new Book("isbn", )
+        Book book = new Book("MyStory", "This is the story of my life in US", 10, "98765",new Date(), 348, "image.url", Language.English );
+        bookRepository.create(book);
+        Long bookId = book.getId();
+
+        //check the id is not null now
+
+        assertNotNull(bookId);
+
+        //Find created Book
+        Book booktitle = bookRepository.find(bookId);
+
+        //check the book found is correct book
+        assertEquals("MyStory", booktitle.getTitle());
+
+        assertEquals(Long.valueOf(1), bookRepository.countAll());
+        assertEquals(1, bookRepository.findAll().size());
+
+        bookRepository.delete(bookId);
+
+        assertEquals(Long.valueOf(0), bookRepository.countAll());
+        assertEquals(0, bookRepository.findAll().size());
+
     }
 
     @Deployment
