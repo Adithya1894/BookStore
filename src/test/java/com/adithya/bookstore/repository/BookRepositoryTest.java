@@ -2,6 +2,8 @@ package com.adithya.bookstore.repository;
 
 import com.adithya.bookstore.model.Book;
 import com.adithya.bookstore.model.Language;
+import com.adithya.bookstore.util.IsbnGenerator;
+import com.adithya.bookstore.util.NumberGenerator;
 import com.adithya.bookstore.util.TextUtil;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
@@ -55,6 +57,7 @@ public class BookRepositoryTest {
 
         //check the book found is correct book
         assertEquals("My Story", booktitle.getTitle());
+        assertTrue(book.getIsbn().startsWith("14"));
 
         assertEquals(Long.valueOf(1), bookRepository.countAll());
         assertEquals(1, bookRepository.findAll().size());
@@ -73,6 +76,8 @@ public class BookRepositoryTest {
                 .addClass(Book.class)
                 .addClass(Language.class)
                 .addClass(TextUtil.class)
+                .addClass(NumberGenerator.class)
+                .addClass(IsbnGenerator.class)
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
                 .addAsManifestResource("META-INF/test-persistence.xml", "persistence.xml");
     }
