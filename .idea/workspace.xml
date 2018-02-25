@@ -10,8 +10,6 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/adithya/bookstore/rest/BookEndPoint.java" />
       <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/adithya/bookstore/rest/JAXRSConfiguration.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adithya/bookstore/model/Book.java" afterPath="$PROJECT_DIR$/src/main/java/com/adithya/bookstore/model/Book.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adithya/bookstore/model/Language.java" afterPath="$PROJECT_DIR$/src/main/java/com/adithya/bookstore/model/Language.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/adithya/bookstore/repository/BookRepositoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/adithya/bookstore/repository/BookRepositoryTest.java" />
     </list>
@@ -653,7 +651,7 @@
       <option name="presentableId" value="Default" />
       <updated>1519460207017</updated>
       <workItem from="1519460211560" duration="15040000" />
-      <workItem from="1519535310498" duration="4337000" />
+      <workItem from="1519535310498" duration="4361000" />
     </task>
     <task id="LOCAL-00001" summary="added the language enum Class">
       <created>1519461168157</created>
@@ -802,7 +800,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519529465037</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="updated the language enum and changed the proerty names to more meaningful ones">
+      <created>1519581827081</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1519581827081</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -838,7 +843,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19377000" />
+    <option name="totallyTimeSpent" value="19401000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="837" extended-state="0" />
