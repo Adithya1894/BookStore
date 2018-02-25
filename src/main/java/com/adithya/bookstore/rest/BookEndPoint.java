@@ -20,6 +20,7 @@ public class BookEndPoint {
 
     @GET
     @Path("{id: \\d+}")
+    @Produces(APPLICATION_JSON)
     public Response getBook(@PathParam("id")  @Min(1) Long id) {
 
         Book book = bookRepository.find(id);
@@ -40,6 +41,7 @@ public class BookEndPoint {
     //Delete request to delete the particular book using its id.
     @DELETE
     @Path("/{id : \\d+}")
+    @Produces(APPLICATION_JSON)
     public Response deleteBook(@PathParam("id") @Min(1) Long id) {
         bookRepository.delete(id);
         return Response.noContent().build();
