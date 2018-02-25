@@ -7,11 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e642a475-1af1-452e-a2cb-856daec2e482" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/adithya/bookstore/util/TextUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/adithya/bookstore/repository/BookRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/adithya/bookstore/repository/BookRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/adithya/bookstore/repository/BookRepositoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/adithya/bookstore/repository/BookRepositoryTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -580,7 +577,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519460207017</updated>
-      <workItem from="1519460211560" duration="10677000" />
+      <workItem from="1519460211560" duration="10765000" />
     </task>
     <task id="LOCAL-00001" summary="added the language enum Class">
       <created>1519461168157</created>
@@ -687,7 +684,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519526154204</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added the text util class and also added the dependency of this class into Shrinkwrap">
+      <created>1519528408570</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1519528408570</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -723,7 +727,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10677000" />
+    <option name="totallyTimeSpent" value="10765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="837" extended-state="0" />
@@ -833,7 +837,8 @@
     <MESSAGE value="added the default no arguments constructor" />
     <MESSAGE value="added the validation tests to the BookRepositoryTest class" />
     <MESSAGE value="Added bean validation annotations to the parameters" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added bean validation annotations to the parameters" />
+    <MESSAGE value="Added the text util class and also added the dependency of this class into Shrinkwrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the text util class and also added the dependency of this class into Shrinkwrap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

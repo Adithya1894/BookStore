@@ -1,8 +1,10 @@
 package com.adithya.bookstore.repository;
 
 import com.adithya.bookstore.model.Book;
+import com.adithya.bookstore.util.TextUtil;
 
 import javax.enterprise.inject.TransientReference;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -16,6 +18,9 @@ public class BookRepository {
     @PersistenceContext(name = "bookStorePu")
     private EntityManager entityManager;
 
+    @Inject
+    private TextUtil textUtil;
+
     public Book find(@NotNull Long id){
 
         return  entityManager.find(Book.class, id);
@@ -25,6 +30,8 @@ public class BookRepository {
     @Transactional(Transactional.TxType.REQUIRED)
     public Book create(@NotNull Book book)
     {
+        //sanitizes the title of the book, if the user enters more than required spaces.
+         book.setTitle(textUtil.sanitize(book.getTitle()));
          entityManager.persist(book);
          return book;
 
