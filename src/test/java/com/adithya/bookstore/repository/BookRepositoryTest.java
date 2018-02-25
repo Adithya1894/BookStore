@@ -2,6 +2,7 @@ package com.adithya.bookstore.repository;
 
 import com.adithya.bookstore.model.Book;
 import com.adithya.bookstore.model.Language;
+import com.adithya.bookstore.util.TextUtil;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -41,7 +42,7 @@ public class BookRepositoryTest {
 
         //create a book
 
-        Book book = new Book("MyStory", "This is the story of my life in US", 10, "98765",new Date(), 348, "image.url", Language.English );
+        Book book = new Book("My  Story", "This is the story of my life in US", 10, "98765",new Date(), 348, "image.url", Language.English );
         bookRepository.create(book);
         Long bookId = book.getId();
 
@@ -53,7 +54,7 @@ public class BookRepositoryTest {
         Book booktitle = bookRepository.find(bookId);
 
         //check the book found is correct book
-        assertEquals("MyStory", booktitle.getTitle());
+        assertEquals("My Story", booktitle.getTitle());
 
         assertEquals(Long.valueOf(1), bookRepository.countAll());
         assertEquals(1, bookRepository.findAll().size());
@@ -71,6 +72,7 @@ public class BookRepositoryTest {
                 .addClass(BookRepository.class)
                 .addClass(Book.class)
                 .addClass(Language.class)
+                .addClass(TextUtil.class)
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
                 .addAsManifestResource("META-INF/test-persistence.xml", "persistence.xml");
     }
