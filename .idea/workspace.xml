@@ -7,8 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e642a475-1af1-452e-a2cb-856daec2e482" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/adithya/bookstore/util/IsbnGenerator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/adithya/bookstore/util/NumberGenerator.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/adithya/bookstore/repository/BookRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/adithya/bookstore/repository/BookRepository.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/adithya/bookstore/repository/BookRepositoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/adithya/bookstore/repository/BookRepositoryTest.java" />
@@ -621,7 +619,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519460207017</updated>
-      <workItem from="1519460211560" duration="11647000" />
+      <workItem from="1519460211560" duration="11702000" />
     </task>
     <task id="LOCAL-00001" summary="added the language enum Class">
       <created>1519461168157</created>
@@ -749,7 +747,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519528549848</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added the Number Generator Interface for generating the ISBN automatically">
+      <created>1519529364388</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1519529364388</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -785,7 +790,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11647000" />
+    <option name="totallyTimeSpent" value="11702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="837" extended-state="0" />
@@ -813,7 +818,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48261476" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48261476" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37313432" sideWeight="0.49442896" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6615599" sideWeight="0.5063063" order="0" side_tool="true" content_ui="tabs" />
@@ -898,7 +903,8 @@
     <MESSAGE value="Added the text util class and also added the dependency of this class into Shrinkwrap" />
     <MESSAGE value="Added the Injection of TextUtil into BookRepository class" />
     <MESSAGE value="added the dependency for arquillian in the arquallian.xml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the dependency for arquillian in the arquallian.xml file" />
+    <MESSAGE value="Added the Number Generator Interface for generating the ISBN automatically" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the Number Generator Interface for generating the ISBN automatically" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

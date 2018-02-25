@@ -1,6 +1,7 @@
 package com.adithya.bookstore.repository;
 
 import com.adithya.bookstore.model.Book;
+import com.adithya.bookstore.util.NumberGenerator;
 import com.adithya.bookstore.util.TextUtil;
 
 import javax.enterprise.inject.TransientReference;
@@ -21,6 +22,9 @@ public class BookRepository {
     @Inject
     private TextUtil textUtil;
 
+    @Inject
+    private NumberGenerator numberGenerator;
+
     public Book find(@NotNull Long id){
 
         return  entityManager.find(Book.class, id);
@@ -32,6 +36,7 @@ public class BookRepository {
     {
         //sanitizes the title of the book, if the user enters more than required spaces.
          book.setTitle(textUtil.sanitize(book.getTitle()));
+         book.setIsbn(numberGenerator.generateNumber());
          entityManager.persist(book);
          return book;
 
