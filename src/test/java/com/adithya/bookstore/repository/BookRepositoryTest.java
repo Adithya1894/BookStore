@@ -2,6 +2,8 @@ package com.adithya.bookstore.repository;
 
 import com.adithya.bookstore.model.Book;
 import com.adithya.bookstore.model.Language;
+import com.adithya.bookstore.rest.BookEndPoint;
+import com.adithya.bookstore.rest.JAXRSConfiguration;
 import com.adithya.bookstore.util.IsbnGenerator;
 import com.adithya.bookstore.util.NumberGenerator;
 import com.adithya.bookstore.util.TextUtil;
@@ -32,7 +34,7 @@ public class BookRepositoryTest {
 
     @Test(expected = Exception.class)
     public void createInvalidBook(){
-        Book book = new Book(null, "This has all the java code", 11,"98765",new Date(), 348, "image.url", Language.English );
+        Book book = new Book( "987", "657", "My java", "image", Language.ENGLISH, 10, 348, new Date(),"contains all java content");
         bookRepository.create(book);
     }
 
@@ -44,7 +46,7 @@ public class BookRepositoryTest {
 
         //create a book
 
-        Book book = new Book("My  Story", "This is the story of my life in US", 10, "98765",new Date(), 348, "image.url", Language.English );
+        Book book = new Book("987", "657", "My Story", "image", Language.ENGLISH, 10, 348, new Date(),"contains all java content");
         bookRepository.create(book);
         Long bookId = book.getId();
 
@@ -78,6 +80,8 @@ public class BookRepositoryTest {
                 .addClass(TextUtil.class)
                 .addClass(NumberGenerator.class)
                 .addClass(IsbnGenerator.class)
+                .addClass(BookEndPoint.class)
+                .addClass(JAXRSConfiguration.class)
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
                 .addAsManifestResource("META-INF/test-persistence.xml", "persistence.xml");
     }
