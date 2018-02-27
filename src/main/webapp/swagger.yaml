@@ -1,0 +1,172 @@
+---
+swagger: "2.0"
+info:
+  description: "BookStore APIs exposed from a Java EE back-end to an Angular front-end"
+  version: "1.0.0"
+  title: "BookStore APIs"
+  contact:
+    name: "Adithya Morampudi"
+    url: "https://github.com/Adithya1894"
+    email: "Adithya1894@gmail.com"
+host: "localhost:8080"
+basePath: "/bookstore-back/api"
+tags:
+- name: "Books"
+schemes:
+- "http"
+- "https"
+paths:
+  /books:
+    get:
+      tags:
+      - "Books"
+      summary: "Returns a list of books if  available"
+      description: ""
+      operationId: "getBooks"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Book Found"
+          schema:
+            $ref: "#/definitions/Book"
+        204:
+          description: "no content"
+        400:
+          description: "Bad request or invalid data"
+        404:
+          description: "book not found"
+    post:
+      tags:
+      - "Books"
+      summary: "Creates a book with the given details after validation"
+      description: ""
+      operationId: "createBook"
+      consumes:
+      - "application/json"
+      parameters: []
+      responses:
+        201:
+          description: "Book has been created"
+        415:
+          description: "Format Incorrect"
+  /books/count:
+    get:
+      tags:
+      - "Books"
+      summary: "Counts the number of books"
+      description: ""
+      operationId: "countBook"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "books found"
+        204:
+          description: "No Content"
+  /books/{id}:
+    get:
+      tags:
+      - "Books"
+      summary: "Returns a book if it is available"
+      description: ""
+      operationId: "getBook"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+        minimum: 1.0
+        pattern: "\\d+"
+        format: "int64"
+      responses:
+        200:
+          description: "Book Found"
+          schema:
+            $ref: "#/definitions/Book"
+        204:
+          description: "no content"
+        400:
+          description: "Bad request or invalid data"
+        404:
+          description: "book not found"
+    delete:
+      tags:
+      - "Books"
+      summary: "Deletes a book with Delete request"
+      description: ""
+      operationId: "deleteBook"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+        minimum: 1.0
+        pattern: "\\d+"
+        format: "int64"
+      responses:
+        200:
+          description: "Book Deleted successfully"
+        500:
+          description: "Internal Error"
+definitions:
+  Book:
+    type: "object"
+    required:
+    - "isbn"
+    - "title"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+        description: "Primary Identifier"
+      title:
+        type: "string"
+        description: "title"
+        minLength: 1
+        maxLength: 200
+      description:
+        type: "string"
+        description: "Description"
+        minLength: 1
+        maxLength: 100000
+      unitcost:
+        type: "number"
+        format: "float"
+        description: "Cost"
+        minimum: 1.0
+      isbn:
+        type: "string"
+        description: "ISBN"
+        minLength: 1
+        maxLength: 50
+      publishedDate:
+        type: "string"
+        format: "date-time"
+        description: "Published_Date"
+      noOfPages:
+        type: "integer"
+        format: "int32"
+        description: "PageCount"
+      language:
+        type: "string"
+        description: "language"
+        enum:
+        - "ENGLISH"
+        - "FRENCH"
+        - "SPANISH"
+        - "PORTUGUESE"
+        - "ITALIAN"
+        - "FINISH"
+        - "GERMAN"
+        - "DEUTSCH"
+        - "RUSSIAN"
+      image:
+        type: "string"
+    description: "Book Resource"
