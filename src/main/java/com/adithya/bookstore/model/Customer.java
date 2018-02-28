@@ -5,6 +5,11 @@ import javax.persistence.*;
 @Entity
 public class Customer {
 
+
+    //no args constructor
+    public Customer() {
+    }
+
     @Id
     @GeneratedValue
     private Long id;
