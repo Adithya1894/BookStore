@@ -21,7 +21,7 @@ import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 @Path("/books")
 @Api("Books")
 public class BookEndPoint {
-
+    //BookEndpoint getBook rest call using @GET method. returns differnt status codes based on the response
     @GET
     @Path("{id: \\d+}")
     @Produces(APPLICATION_JSON)
@@ -43,6 +43,7 @@ public class BookEndPoint {
         return Response.ok(book).build();
     }
 
+    //Endpoint for addind the books into the database
     @POST
     @Consumes(APPLICATION_JSON)
     @ApiOperation(value = "Creates a book with the given details after validation")
