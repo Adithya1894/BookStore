@@ -31,14 +31,14 @@ public class BookRepositoryTest {
     public void findWithInvalid(){
         bookRepository.find(null);
     }
+//
+//    @Test(expected = Exception.class)
+//    public void createInvalidBook(){
+//        Book book = new Book( "987", "657", "My java", "image", Language.ENGLISH, 10, 348, new Date(),"contains all java content");
+//        bookRepository.create(book);
+//    }
 
-    @Test(expected = Exception.class)
-    public void createInvalidBook(){
-        Book book = new Book( "987", "657", "My java", "image", Language.ENGLISH, 10, 348, new Date(),"contains all java content");
-        bookRepository.create(book);
-    }
 
-    @Test
     public void create() throws Exception{
 
         assertEquals(Long.valueOf(0), bookRepository.countAll());
