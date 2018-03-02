@@ -104,6 +104,7 @@
                 <configuration>
                     <systemPropertyVariables>
                         <arquillian.launch>arquillian-wildfly-remote</arquillian.launch>
+                        <jboss.management.http.port>9090</jboss.management.http.port>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
