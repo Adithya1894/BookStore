@@ -4,7 +4,7 @@
 
 # Requirements to run this application 
 
-* Java  
+* Java    
 * Maven(Find it here: https://maven.apache.org)  
 * Wildfly Server(Find it here: http://wildfly.org/downloads/)  
 * Any IDE of your choice  
