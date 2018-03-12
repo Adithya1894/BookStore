@@ -1,6 +1,6 @@
 # BookStore Application
 
-* A simple yet efficient application, to demonstrate the java EE technologies and angular.js 
+* A simple application, to demonstrate the java EE technologies and angular.js 
 
 # Requirements to run this application 
 
